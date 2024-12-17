@@ -14,34 +14,62 @@ const PartneredBrands = () => {
     },
     {
       name: "Spark Up",
-      logo: "/brands/featbooks.png",
+      logo: "/brands/SparkUp.png",
     },
     {
       name: "Feat Radio",
-      logo: "/brands/featbooks.png",
+      logo: "/brands/featradio.png",
     },
     {
       name: "WellTalk",
-      logo: "/brands/featbooks.png",
+      logo: "/brands/WellTalk.png",
+    },
+    {
+      name: "Kennet Cobonpue",
+      logo: "/brands/kennetcobonpue.jpg",
+    },
+    {
+      name: "Pacific Traders",
+      logo: "/brands/pacificTraders.png",
+    },
+    {
+      name: "Plan Out",
+      logo: "/brands/planout.jpg",
+    },
+    {
+      name: "Winnia",
+      logo: "/brands/winnia.jpg",
     },
   ];
 
   const brandsRow2 = [
     {
-      name: "United Bookshelf",
-      logo: "/brands/featbooks.png",
+      name: "ASBIR",
+      logo: "/brands/asbir.png",
     },
     {
       name: "Aim Radio",
-      logo: "/brands/featbooks.png",
+      logo: "/brands/aimRadio.png",
     },
     {
       name: "Up Radio",
-      logo: "/brands/featbooks.png",
+      logo: "/brands/UpRadio.png",
     },
     {
-      name: "American Bookshelf",
-      logo: "/brands/featbooks.png",
+      name: "Beetzee",
+      logo: "/brands/beetzee.jpg",
+    },
+    {
+      name: "nextART",
+      logo: "/brands/nextART.jpg",
+    },
+    {
+      name: "Paraiso",
+      logo: "/brands/paraiso.jpg",
+    },
+    {
+      name: "Romoza",
+      logo: "/brands/romoza.jpg",
     },
   ];
 
