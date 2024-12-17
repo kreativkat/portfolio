@@ -11,6 +11,7 @@ export default {
         primary: "#000000",
         secondary: "#ffffff",
         tertiary: "#373a3c",
+        quaternary: "#F4F4F4",
       },
       fontFamily: {
         hostGrotesk: "var(--font-host-grotesk)",

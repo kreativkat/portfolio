@@ -7,6 +7,7 @@ const ContactUs = () => {
     email: "",
     subject: "",
     message: "",
+    phoneNumber: "",
   });
 
   const handleChange = (e) => {
@@ -81,6 +82,26 @@ const ContactUs = () => {
                   required
                   className="w-full px-4 py-3 rounded-md border border-tertiary/20 focus:border-primary focus:ring-2 focus:ring-primary/5 bg-transparent transition duration-200 outline-none text-primary"
                   placeholder="john@example.com"
+                />
+              </div>
+
+              {/* Phone Number Input */}
+              <div>
+                <label
+                  htmlFor="phoneNumber"
+                  className="block text-sm font-medium text-primary mb-2"
+                >
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 rounded-md border border-tertiary/20 focus:border-primary focus:ring-2 focus:ring-primary/5 bg-transparent transition duration-200 outline-none text-primary"
+                  placeholder="123-456-7890"
                 />
               </div>
             </div>

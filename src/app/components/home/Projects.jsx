@@ -49,7 +49,7 @@ const Projects = () => {
       : projects.filter((project) => project.category === activeFilter);
 
   return (
-    <section className="w-full min-h-screen bg-secondary py-20 font-hostGrotesk">
+    <section className="w-full min-h-screen bg-quaternary py-20 font-hostGrotesk">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
