@@ -1,139 +1,59 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
+import { services } from "@/app/components/home/servicesData";
+import Link from "next/link";
+import Image from "next/image";
 
 const ServicesPage = () => {
-  const services = [
-    {
-      id: 1,
-      title: "Web Development",
-      description:
-        "Custom web solutions tailored to your business needs. From responsive websites to complex web applications.",
-      features: [
-        "Custom Website Development",
-        "E-commerce Solutions",
-        "Web Applications",
-        "CMS Development",
-        "API Integration",
-        "Performance Optimization",
-      ],
-      icon: (
-        <svg
-          className="w-12 h-12"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-          />
-        </svg>
-      ),
+  const [activeService, setActiveService] = useState(0);
+
+  const serviceDetails = services.map((service) => ({
+    ...service,
+    process: [
+      {
+        title: "Discovery",
+        description:
+          "Understanding your specific needs and objectives through detailed consultation",
+      },
+      {
+        title: "Strategy",
+        description: "Developing a comprehensive plan tailored to your goals",
+      },
+      {
+        title: "Implementation",
+        description: "Executing the strategy with precision and expertise",
+      },
+      {
+        title: "Review",
+        description: "Regular monitoring and optimization for best results",
+      },
+    ],
+    caseStudies: [
+      {
+        title: "Client Success Story",
+        description: "How we helped achieve significant results",
+        metrics: ["50% increase in engagement", "30% cost reduction", "2x ROI"],
+      },
+    ],
+    pricing: {
+      starter: {
+        name: "Basic",
+        features: ["Core features", "Basic support", "Monthly reports"],
+      },
+      professional: {
+        name: "Professional",
+        features: ["Advanced features", "Priority support", "Weekly reports"],
+      },
+      enterprise: {
+        name: "Enterprise",
+        features: ["Custom solutions", "24/7 support", "Daily reports"],
+      },
     },
-    {
-      id: 2,
-      title: "Mobile Development",
-      description:
-        "Native and cross-platform mobile applications that deliver exceptional user experiences.",
-      features: [
-        "iOS App Development",
-        "Android App Development",
-        "Cross-platform Solutions",
-        "App Maintenance",
-        "UI/UX Design",
-        "App Store Optimization",
-      ],
-      icon: (
-        <svg
-          className="w-12 h-12"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
-          />
-        </svg>
-      ),
-    },
-    {
-      id: 3,
-      title: "Digital Marketing",
-      description:
-        "Strategic digital marketing solutions to boost your online presence and drive growth.",
-      features: [
-        "SEO Optimization",
-        "Social Media Marketing",
-        "Content Strategy",
-        "Email Marketing",
-        "Analytics & Reporting",
-        "PPC Campaigns",
-      ],
-      icon: (
-        <svg
-          className="w-12 h-12"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"
-          />
-        </svg>
-      ),
-    },
-    {
-      id: 4,
-      title: "UI/UX Design",
-      description:
-        "User-centered design solutions that create meaningful and engaging digital experiences.",
-      features: [
-        "User Research",
-        "Wireframing",
-        "Prototyping",
-        "Visual Design",
-        "Interaction Design",
-        "Usability Testing",
-      ],
-      icon: (
-        <svg
-          className="w-12 h-12"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
-          />
-        </svg>
-      ),
-    },
-  ];
+  }));
 
   return (
     <main className="pt-16">
-      <section className="w-full min-h-screen bg-secondary py-20 font-hostGrotesk">
+      <section className="w-full min-h-screen bg-quaternary py-20 font-hostGrotesk">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16">
@@ -141,52 +61,186 @@ const ServicesPage = () => {
               Our Services
             </h1>
             <p className="text-tertiary text-lg md:text-xl max-w-2xl mx-auto">
-              Comprehensive digital solutions to help your business thrive in
-              the modern world
+              In-depth solutions tailored for digital success
             </p>
           </div>
 
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service) => (
-              <div
-                key={service.id}
-                className="bg-secondary p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-primary/5"
+          {/* Service Navigation */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {services.map((service, index) => (
+              <button
+                key={service.title}
+                onClick={() => setActiveService(index)}
+                className={`px-6 py-3 rounded-lg transition-all duration-300 flex items-center gap-2 ${
+                  activeService === index
+                    ? "bg-primary text-secondary"
+                    : "bg-secondary text-primary hover:bg-primary/5"
+                }`}
               >
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="text-primary">{service.icon}</div>
-                  <h3 className="text-2xl font-bold text-primary">
-                    {service.title}
-                  </h3>
+                {service.icon}
+                <span>{service.title}</span>
+              </button>
+            ))}
+          </div>
+
+          {/* Detailed Service Content */}
+          <div className="bg-secondary rounded-xl p-8 md:p-12 shadow-lg">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+              {/* Main Content */}
+              <div className="lg:col-span-2 space-y-8">
+                <div>
+                  <h2 className="text-3xl font-bold text-primary mb-4">
+                    {serviceDetails[activeService].title}
+                  </h2>
+                  <p className="text-tertiary text-lg">
+                    {serviceDetails[activeService].description}
+                  </p>
                 </div>
 
-                <p className="text-tertiary mb-6">{service.description}</p>
+                {/* Key Features */}
+                <div>
+                  <h3 className="text-2xl font-bold text-primary mb-6">
+                    Key Features
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {serviceDetails[activeService].features.map(
+                      (feature, index) => (
+                        <div
+                          key={index}
+                          className="flex items-start gap-3 bg-quaternary p-4 rounded-lg"
+                        >
+                          <svg
+                            className="w-6 h-6 text-primary flex-shrink-0 mt-1"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                          <span className="text-tertiary">{feature}</span>
+                        </div>
+                      )
+                    )}
+                  </div>
+                </div>
 
-                <ul className="space-y-3">
-                  {service.features.map((feature, index) => (
-                    <li
-                      key={index}
-                      className="flex items-center gap-2 text-tertiary"
-                    >
-                      <svg
-                        className="w-5 h-5 text-primary"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
+                {/* Process */}
+                <div>
+                  <h3 className="text-2xl font-bold text-primary mb-6">
+                    Our Process
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {serviceDetails[activeService].process.map(
+                      (step, index) => (
+                        <div
+                          key={index}
+                          className="bg-quaternary p-6 rounded-lg space-y-2"
+                        >
+                          <div className="flex items-center gap-3">
+                            <span className="w-8 h-8 rounded-full bg-primary text-secondary flex items-center justify-center font-bold">
+                              {index + 1}
+                            </span>
+                            <h4 className="text-lg font-bold text-primary">
+                              {step.title}
+                            </h4>
+                          </div>
+                          <p className="text-tertiary pl-11">
+                            {step.description}
+                          </p>
+                        </div>
+                      )
+                    )}
+                  </div>
+                </div>
+
+                {/* Case Studies */}
+                <div>
+                  <h3 className="text-2xl font-bold text-primary mb-6">
+                    Success Stories
+                  </h3>
+                  {serviceDetails[activeService].caseStudies.map(
+                    (study, index) => (
+                      <div
+                        key={index}
+                        className="bg-quaternary p-6 rounded-lg space-y-4"
                       >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                        <h4 className="text-xl font-bold text-primary">
+                          {study.title}
+                        </h4>
+                        <p className="text-tertiary">{study.description}</p>
+                        <div className="flex flex-wrap gap-4">
+                          {study.metrics.map((metric, idx) => (
+                            <span
+                              key={idx}
+                              className="px-4 py-2 bg-primary/5 text-primary rounded-full text-sm"
+                            >
+                              {metric}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )
+                  )}
+                </div>
               </div>
-            ))}
+
+              {/* Sidebar */}
+              <div className="space-y-8">
+                {/* Pricing Plans */}
+                <div className="bg-quaternary p-6 rounded-lg">
+                  <h3 className="text-xl font-bold text-primary mb-6">
+                    Pricing Plans
+                  </h3>
+                  <div className="space-y-4">
+                    {Object.entries(serviceDetails[activeService].pricing).map(
+                      ([key, plan]) => (
+                        <div
+                          key={key}
+                          className="bg-secondary p-4 rounded-lg space-y-3"
+                        >
+                          <h4 className="font-bold text-primary">
+                            {plan.name}
+                          </h4>
+                          <ul className="space-y-2">
+                            {plan.features.map((feature, index) => (
+                              <li
+                                key={index}
+                                className="text-sm text-tertiary flex items-center gap-2"
+                              >
+                                <span className="text-primary">•</span>
+                                {feature}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )
+                    )}
+                  </div>
+                </div>
+
+                {/* CTA */}
+                <div className="bg-primary p-6 rounded-lg text-center">
+                  <h3 className="text-xl font-bold text-secondary mb-4">
+                    Ready to Get Started?
+                  </h3>
+                  <p className="text-secondary/80 mb-6">
+                    Let's discuss your project and create something amazing
+                    together
+                  </p>
+                  <Link
+                    href="/#contact"
+                    className="inline-block w-full py-3 bg-secondary text-primary rounded-lg hover:bg-tertiary hover:text-secondary transition-colors duration-300"
+                  >
+                    Contact Us
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

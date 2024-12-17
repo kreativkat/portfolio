@@ -88,7 +88,7 @@ const Projects = () => {
         {/* View All Projects Button */}
         <div className="text-center mt-12">
           <Link
-            href="/projects"
+            href="/pages/projects"
             className="inline-flex items-center px-8 py-3 border-2 border-primary text-primary font-medium rounded-md hover:bg-primary hover:text-secondary transition-all duration-300"
           >
             View All Projects
