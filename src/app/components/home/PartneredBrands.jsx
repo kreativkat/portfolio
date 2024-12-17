@@ -10,38 +10,38 @@ const PartneredBrands = () => {
     },
     {
       name: "Feat Books",
-      logo: "/brands/feat-books.png",
+      logo: "/brands/featbooks.png",
     },
     {
       name: "Spark Up",
-      logo: "/brands/spark-up.png",
+      logo: "/brands/featbooks.png",
     },
     {
       name: "Feat Radio",
-      logo: "/brands/feat-radio.png",
+      logo: "/brands/featbooks.png",
     },
     {
       name: "WellTalk",
-      logo: "/brands/welltalk.png",
+      logo: "/brands/featbooks.png",
     },
   ];
 
   const brandsRow2 = [
     {
       name: "United Bookshelf",
-      logo: "/brands/united-bookshelf.png",
+      logo: "/brands/featbooks.png",
     },
     {
       name: "Aim Radio",
-      logo: "/brands/aim-radio.png",
+      logo: "/brands/featbooks.png",
     },
     {
       name: "Up Radio",
-      logo: "/brands/up-radio.png",
+      logo: "/brands/featbooks.png",
     },
     {
       name: "American Bookshelf",
-      logo: "/brands/american-bookshelf.png",
+      logo: "/brands/featbooks.png",
     },
   ];
 

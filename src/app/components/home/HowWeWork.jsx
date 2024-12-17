@@ -21,8 +21,7 @@ const HowWeWork = () => {
             <div className="aspect-video rounded-xl overflow-hidden shadow-xl">
               <video
                 className="w-full h-full object-cover"
-                controls
-                poster="/video-thumbnail.jpg"
+                // poster="/video-thumbnail.jpg"
                 autoPlay
                 muted
                 loop
