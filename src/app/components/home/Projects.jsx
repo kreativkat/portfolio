@@ -2,45 +2,22 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { projects } from "./projectsData";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("all");
 
-  const filters = ["all", "web", "mobile", "branding"];
-
-  const projects = [
-    {
-      id: 1,
-      title: "E-Commerce Platform",
-      category: "web",
-      image: "/projects/project1.jpg",
-      description: "Modern e-commerce solution with seamless user experience",
-      link: "/projects/e-commerce",
-    },
-    {
-      id: 2,
-      title: "Mobile Banking App",
-      category: "mobile",
-      image: "/projects/project2.jpg",
-      description: "Secure and intuitive mobile banking application",
-      link: "/projects/banking-app",
-    },
-    {
-      id: 3,
-      title: "Brand Identity Design",
-      category: "branding",
-      image: "/projects/project3.jpg",
-      description: "Complete brand identity system for tech startup",
-      link: "/projects/brand-identity",
-    },
-    {
-      id: 4,
-      title: "Portfolio Website",
-      category: "web",
-      image: "/projects/project4.jpg",
-      description: "Responsive portfolio website with modern design",
-      link: "/projects/portfolio",
-    },
+  const filters = [
+    "all",
+    "Web Development",
+    "Digital Marketing",
+    "Branding",
+    "Booklet Designs",
+    "Corporate Profiles",
+    "Graphic Design",
+    "Murals",
+    "Photography",
+    "Social Media",
   ];
 
   const filteredProjects =
