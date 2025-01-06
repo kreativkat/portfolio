@@ -1,4 +1,12 @@
-import { BookOpen, Building2, BrickWall, Camera, Podcast } from "lucide-react";
+import {
+  BookOpen,
+  Building2,
+  BrickWall,
+  Camera,
+  Podcast,
+  NotebookPen,
+  Codesandbox,
+} from "lucide-react";
 
 export const services = [
   {
@@ -53,6 +61,13 @@ export const services = [
         />
       </svg>
     ),
+  },
+  {
+    title: "Publishing",
+    description:
+      "Publishing services for books, magazines, and digital content. We offer comprehensive publishing solutions, including book design, printing, and distribution. Our goal is to help you bring your ideas to life and reach your audience effectively.",
+    features: ["Book Design", "Printing", "Distribution"],
+    icon: <NotebookPen />,
   },
   {
     title: "Digital Marketing",
@@ -169,27 +184,7 @@ export const services = [
       "Visual Identity",
       "Brand Guidelines",
     ],
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M12 20l9-5-9-5-9 5 9 5z"
-        />
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M12 12l9-5-9-5-9 5 9 5z"
-        />
-      </svg>
-    ),
+    icon: <Codesandbox />,
   },
   {
     title: "Social Media",

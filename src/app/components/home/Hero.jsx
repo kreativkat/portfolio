@@ -14,6 +14,7 @@ const Hero = () => {
           fill
           className="object-cover"
           priority
+          quality={100}
         />
         <div className="absolute inset-0 bg-primary/60 backdrop-blur-[2px]" />
       </div>
@@ -35,7 +36,7 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
             <Link
-              href="/projects"
+              href="/pages/projects"
               className="px-8 py-3 bg-secondary text-primary font-medium rounded-md hover:bg-tertiary hover:text-secondary transition-all duration-300 min-w-[160px] font-hostGrotesk"
             >
               View Projects

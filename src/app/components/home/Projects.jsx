@@ -10,6 +10,7 @@ const Projects = () => {
   const filters = [
     "all",
     "Web Development",
+    "Publishing",
     "Digital Marketing",
     "Branding",
     "Booklet Designs",
@@ -59,7 +60,7 @@ const Projects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {filteredProjects.map((project) => (
             <Link
-              href={project.link}
+              href={`/pages/${project.slug}`}
               key={project.id}
               className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
             >

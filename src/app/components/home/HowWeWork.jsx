@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { workProcess } from "./workprocessData";
+import Link from "next/link";
 
 const HowWeWork = () => {
   return (
@@ -57,9 +58,11 @@ const HowWeWork = () => {
 
             {/* CTA Button */}
             <div className="mt-8 pl-16">
-              <button className="px-8 py-3 bg-primary text-secondary font-medium rounded-md hover:bg-tertiary transition-colors duration-300">
-                Start Your Project
-              </button>
+              <Link href="/#contact">
+                <button className="px-8 py-3 bg-primary text-secondary font-medium rounded-md hover:bg-tertiary transition-colors duration-300">
+                  Start Your Project
+                </button>
+              </Link>
             </div>
           </div>
         </div>

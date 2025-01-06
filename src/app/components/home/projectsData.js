@@ -1,12 +1,13 @@
 export const projects = [
   {
     id: 1,
-    title: "Branding Website",
+    title: "Creators Value",
     category: "Web Development",
     image: "/projects/website.png",
     description:
-      "Comprehensive branding website with a focus on brand identity and user engagement",
-    link: "/projects/branding-website",
+      "A comprehensive platform for content creators to monetize their work",
+    link: "/pages/project/creators-value",
+    slug: "creators-value",
   },
   {
     id: 2,

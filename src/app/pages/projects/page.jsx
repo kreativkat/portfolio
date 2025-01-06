@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { projects } from "@/app/components/home/projectsData";
+import { projects } from "../../components/home/projectsData";
+import Link from "next/link";
 
 const ProjectsPage = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -73,7 +74,9 @@ const ProjectsPage = () => {
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-secondary transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                      <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                      <h3 className="text-xl font-bold mb-2">
+                        {project.title}
+                      </h3>
                       <p className="text-secondary/90">{project.description}</p>
                     </div>
                   </div>
@@ -104,20 +107,21 @@ const ProjectsPage = () => {
                       </p>
                       {project.year && (
                         <p className="text-tertiary text-sm">
-                          <span className="font-medium">Year:</span> {project.year}
+                          <span className="font-medium">Year:</span>{" "}
+                          {project.year}
                         </p>
                       )}
                     </div>
                   )}
 
                   {/* Project Link */}
-                  {project.link && (
-                    <a
-                      href={project.link}
+                  {project.slug && (
+                    <Link
+                      href={`/pages/${project.slug}`}
                       className="inline-block mt-4 text-primary hover:text-tertiary transition-colors duration-300 text-sm font-medium"
                     >
                       View Project Details →
-                    </a>
+                    </Link>
                   )}
                 </div>
               </div>
@@ -130,7 +134,8 @@ const ProjectsPage = () => {
               Have a Project in Mind?
             </h2>
             <p className="text-tertiary mb-8 max-w-2xl mx-auto">
-              Let's collaborate to create something extraordinary for your business
+              Let's collaborate to create something extraordinary for your
+              business
             </p>
             <a
               href="/#contact"

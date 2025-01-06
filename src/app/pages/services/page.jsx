@@ -1,55 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import { services } from "@/app/components/home/servicesData";
+import { services } from "../../components/home/servicesData";
 import Link from "next/link";
-import Image from "next/image";
+import { serviceDetails } from "./serviceDetails";
 
 const ServicesPage = () => {
   const [activeService, setActiveService] = useState(0);
-
-  const serviceDetails = services.map((service) => ({
-    ...service,
-    process: [
-      {
-        title: "Discovery",
-        description:
-          "Understanding your specific needs and objectives through detailed consultation",
-      },
-      {
-        title: "Strategy",
-        description: "Developing a comprehensive plan tailored to your goals",
-      },
-      {
-        title: "Implementation",
-        description: "Executing the strategy with precision and expertise",
-      },
-      {
-        title: "Review",
-        description: "Regular monitoring and optimization for best results",
-      },
-    ],
-    caseStudies: [
-      {
-        title: "Client Success Story",
-        description: "How we helped achieve significant results",
-        metrics: ["50% increase in engagement", "30% cost reduction", "2x ROI"],
-      },
-    ],
-    pricing: {
-      starter: {
-        name: "Basic",
-        features: ["Core features", "Basic support", "Monthly reports"],
-      },
-      professional: {
-        name: "Professional",
-        features: ["Advanced features", "Priority support", "Weekly reports"],
-      },
-      enterprise: {
-        name: "Enterprise",
-        features: ["Custom solutions", "24/7 support", "Daily reports"],
-      },
-    },
-  }));
 
   return (
     <main className="pt-16">
@@ -128,6 +84,74 @@ const ServicesPage = () => {
                     )}
                   </div>
                 </div>
+
+                {/* Add this section after Key Features for Publishing Services */}
+                {serviceDetails[activeService].title ===
+                  "Publishing Services" && (
+                  <div className="mt-8">
+                    <h3 className="text-2xl font-bold text-primary mb-6">
+                      Publishing Formats & Platforms
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                      <div className="bg-quaternary p-6 rounded-lg">
+                        <h4 className="font-bold text-primary mb-4">
+                          Available Formats
+                        </h4>
+                        <ul className="space-y-2">
+                          {serviceDetails[
+                            activeService
+                          ].additionalInfo.formats.map((format, index) => (
+                            <li
+                              key={index}
+                              className="text-tertiary flex items-center gap-2"
+                            >
+                              <span className="text-primary">•</span>
+                              {format}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="bg-quaternary p-6 rounded-lg">
+                        <h4 className="font-bold text-primary mb-4">
+                          Publishing Platforms
+                        </h4>
+                        <ul className="space-y-2">
+                          {serviceDetails[
+                            activeService
+                          ].additionalInfo.platforms.map((platform, index) => (
+                            <li
+                              key={index}
+                              className="text-tertiary flex items-center gap-2"
+                            >
+                              <span className="text-primary">•</span>
+                              {platform}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="bg-quaternary p-6 rounded-lg">
+                        <h4 className="font-bold text-primary mb-4">
+                          Marketing Services
+                        </h4>
+                        <ul className="space-y-2">
+                          {serviceDetails[
+                            activeService
+                          ].additionalInfo.marketingServices.map(
+                            (service, index) => (
+                              <li
+                                key={index}
+                                className="text-tertiary flex items-center gap-2"
+                              >
+                                <span className="text-primary">•</span>
+                                {service}
+                              </li>
+                            )
+                          )}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                )}
 
                 {/* Process */}
                 <div>
