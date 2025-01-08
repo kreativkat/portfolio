@@ -5,25 +5,29 @@ export const projects = [
     category: "Web Development",
     image: "/projects/website.png",
     description:
-      "A comprehensive platform for content creators to monetize their work",
+      "Creators Value is your one-stop platform for editing, publishing, branding, and marketing services. We empower visionaries to bring their ideas to life and achieve success with innovative tools and expert support.",
     link: "/pages/project/creators-value",
     slug: "creators-value",
   },
   {
     id: 2,
-    title: "Social Media Campaign",
+    title: "FeatBooks",
     category: "Digital Marketing",
     image: "/projects/campaign.jpg",
-    description: "Effective social media campaign for brand awareness",
-    link: "/projects/social-media-campaign",
+    description:
+      "Our mission is to help authors, content creators, and storytellers by providing professional publishing and marketing services that bring their visions to life.",
+    link: "/projects/featbooks",
+    slug: "featbooks",
   },
   {
     id: 3,
-    title: "Brand Identity Design",
+    title: "KennethCobonPue",
     category: "Branding",
     image: "/projects/identity.jpg",
-    description: "Complete brand identity system for tech startup",
-    link: "/projects/brand-identity",
+    description:
+      "KennethCobonPue is a brand that specializes in creating unique and stylish products for the modern consumer.",
+    link: "/project/kennethcobonpue",
+    slug: "kennethcobonpue",
   },
 
   {
@@ -52,11 +56,13 @@ export const projects = [
   },
   {
     id: 8,
-    title: "Office Mural",
+    title: "Mural Handuraw",
     category: "Murals",
     image: "/projects/murals.jpg",
-    description: "Inspirational office mural artwork",
-    link: "/projects/office-mural",
+    description:
+      "Mural Handuraw is a mural project in the Philippines with a vibrant celebration of Filipino culture through street art, blending traditional elements with contemporary design.",
+    link: "/pages/project/mural-handuraw",
+    slug: "mural-handuraw",
   },
   {
     id: 9,
@@ -64,7 +70,8 @@ export const projects = [
     category: "Photography",
     image: "/projects/GEISHA.png",
     description: "High-quality product photography for e-commerce",
-    link: "/projects/product-photography",
+    link: "/pages/project/product-photography",
+    slug: "product-photography",
   },
   {
     id: 10,
