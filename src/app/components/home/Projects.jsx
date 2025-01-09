@@ -71,7 +71,7 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 ">
           {displayedProjects.map((project) => (
             <div key={project.id}>
               {project.websiteLink ? (
@@ -84,10 +84,10 @@ const Projects = () => {
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="object-cover transition-transform duration-300 rounded-lg"
                     />
                     {/* Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300  rounded-lg">
                       <div className="absolute bottom-0 left-0 right-0 p-6 text-secondary transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                         <h3 className="text-xl font-bold mb-2">
                           {project.title}
@@ -105,7 +105,12 @@ const Projects = () => {
               ) : (
                 <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
                   <div className="relative h-[400px] w-full">
-                    <Image src={project.image} alt={project.title} fill />
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-300 rounded-lg"
+                    />
                   </div>
                 </div>
               )}
