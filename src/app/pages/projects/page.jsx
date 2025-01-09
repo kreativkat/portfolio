@@ -2,12 +2,14 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { projects } from "../../components/home/projectsData";
-import Link from "next/link";
 import { filters } from "../../components/constants";
+import { useRouter } from "next/navigation";
 
 const ProjectsPage = () => {
   const [activeFilter, setActiveFilter] = useState("all");
   const [selectedPDF, setSelectedPDF] = useState(null);
+
+  const nav = useRouter();
 
   const filteredProjects =
     activeFilter === "all"
@@ -22,8 +24,8 @@ const ProjectsPage = () => {
   const handleProjectClick = (project) => {
     if (project.category === "Branding") {
       setSelectedPDF(project.pdf);
-    } else if (project.slug) {
-      sessionStorage.setItem("project", JSON.stringify(project));
+    } else if (project.websiteLink) {
+      nav.push(project.websiteLink);
     }
   };
 
@@ -80,7 +82,6 @@ const ProjectsPage = () => {
                       <h3 className="text-xl font-bold mb-2">
                         {project.title}
                       </h3>
-                      <p className="text-secondary/90">{project.description}</p>
                     </div>
                   </div>
                 </div>
@@ -101,16 +102,6 @@ const ProjectsPage = () => {
                         </p>
                       )}
                     </div>
-                  )}
-
-                  {/* Project Link */}
-                  {project.slug && project.category !== "Branding" && (
-                    <Link
-                      href={`/pages/projects/${project.slug}`}
-                      className="inline-block mt-4 text-primary hover:text-tertiary transition-colors duration-300 text-sm font-medium"
-                    >
-                      View Project Details →
-                    </Link>
                   )}
                 </div>
               </div>

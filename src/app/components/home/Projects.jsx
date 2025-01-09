@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { projects } from "./projectsData";
@@ -7,18 +7,38 @@ import { filters } from "../constants";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("all");
+  const [displayedProjects, setDisplayedProjects] = useState([]);
 
-  const filteredProjects =
-    activeFilter === "all"
-      ? projects.slice(0, 20)
-      : projects
-          .filter((project) => {
+  const shuffleArray = (array) => {
+    const shuffledArray = array.slice();
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[j]] = [
+        shuffledArray[j],
+        shuffledArray[i],
+      ];
+    }
+    return shuffledArray;
+  };
+
+  useEffect(() => {
+    const filteredProjects =
+      activeFilter === "all"
+        ? projects
+        : projects.filter((project) => {
             if (Array.isArray(project.category)) {
               return project.category.includes(activeFilter);
             }
             return project.category === activeFilter;
-          })
-          .slice(0, 10);
+          });
+
+    const projectsToDisplay =
+      activeFilter === "all"
+        ? filteredProjects.slice(0, 15)
+        : filteredProjects.slice(0, 10);
+
+    setDisplayedProjects(shuffleArray(projectsToDisplay));
+  }, [activeFilter]);
 
   return (
     <section className="w-full min-h-screen bg-quaternary py-20 font-hostGrotesk">
@@ -52,7 +72,7 @@ const Projects = () => {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {filteredProjects.map((project) => (
+          {displayedProjects.map((project) => (
             <div key={project.id}>
               {project.websiteLink ? (
                 <Link
