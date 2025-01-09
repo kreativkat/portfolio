@@ -76,6 +76,7 @@ const ProjectsPage = () => {
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
+
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-secondary transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
@@ -84,25 +85,6 @@ const ProjectsPage = () => {
                       </h3>
                     </div>
                   </div>
-                </div>
-
-                {/* Project Details */}
-                <div className="p-6">
-                  {/* Client Info */}
-                  {project.clientName && (
-                    <div className="pt-4 border-t border-primary/10">
-                      <p className="text-tertiary text-sm">
-                        <span className="font-medium">Client:</span>{" "}
-                        {project.clientName}
-                      </p>
-                      {project.year && (
-                        <p className="text-tertiary text-sm">
-                          <span className="font-medium">Year:</span>{" "}
-                          {project.year}
-                        </p>
-                      )}
-                    </div>
-                  )}
                 </div>
               </div>
             ))}
