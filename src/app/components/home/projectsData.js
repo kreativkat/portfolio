@@ -3,6 +3,7 @@ export const projects = [
     id: 1,
     title: "Creators Value",
     category: "Web Development",
+    websiteLink: "https://creatorsvalue.com",
     image: "/projects/website.png",
     description:
       "Creators Value is your one-stop platform for editing, publishing, branding, and marketing services. We empower visionaries to bring their ideas to life and achieve success with innovative tools and expert support.",
@@ -12,7 +13,8 @@ export const projects = [
   {
     id: 2,
     title: "FeatBooks",
-    category: "Digital Marketing",
+    category: ["Publishing", "Web Development"],
+    websiteLink: "https://featbooks.com",
     image: "/projects/campaign.jpg",
     description:
       "Our mission is to help authors, content creators, and storytellers by providing professional publishing and marketing services that bring their visions to life.",
@@ -22,26 +24,31 @@ export const projects = [
   {
     id: 3,
     title: "KennethCobonPue",
-    category: "Branding",
+    category: ["Corporate Profiles", "Web Development"],
+    websiteLink: "https://kennethcobonpue.com",
     image: "/projects/identity.jpg",
     description:
-      "KennethCobonPue is a brand that specializes in creating unique and stylish products for the modern consumer.",
+      "KennethCobonPue is a furniture company renowned for its innovative and stylish designs, blending traditional craftsmanship with modern aesthetics to create unique and functional pieces.",
     link: "/project/kennethcobonpue",
     slug: "kennethcobonpue",
   },
 
   {
     id: 5,
-    title: "Corporate Booklet",
-    category: "Booklet Designs",
+    title: "NextART",
+    category: ["Booklet Designs", "Web Development"],
+    websiteLink: "https://nextart.com",
     image: "/projects/booklet.png",
-    description: "Professional corporate booklet design",
-    link: "/projects/corporate-booklet",
+    description:
+      "NextART is a platform for artists to showcase their work and connect with art enthusiasts, providing a space for creativity and expression.",
+    link: "/projects/nextart",
+    slug: "nextart",
   },
   {
     id: 6,
     title: "Company Profile",
     category: "Corporate Profiles",
+
     image: "/projects/profile.png",
     description: "Detailed company profile for business presentation",
     link: "/projects/company-profile",
@@ -50,6 +57,7 @@ export const projects = [
     id: 7,
     title: "Event Poster",
     category: "Graphic Design",
+
     image: "/projects/graphic.jpg",
     description: "Creative event poster design",
     link: "/projects/event-poster",
@@ -58,6 +66,7 @@ export const projects = [
     id: 8,
     title: "Mural Handuraw",
     category: "Murals",
+
     image: "/projects/murals.jpg",
     description:
       "Mural Handuraw is a mural project in the Philippines with a vibrant celebration of Filipino culture through street art, blending traditional elements with contemporary design.",
@@ -68,17 +77,205 @@ export const projects = [
     id: 9,
     title: "Product Photography",
     category: "Photography",
+
     image: "/projects/GEISHA.png",
     description: "High-quality product photography for e-commerce",
     link: "/pages/project/product-photography",
     slug: "product-photography",
   },
   {
-    id: 10,
-    title: "Instagram Content",
+    id: 11,
+    title: "Youth for Livable Communities",
     category: "Social Media",
-    image: "/projects/instagram.png",
-    description: "Engaging Instagram content for brand promotion",
-    link: "/projects/instagram-content",
+    websiteLink: "https://www.facebook.com/youthforlivablecommunities",
+    image: "/projects/categoriesAssets/SocialMedia/YLC.png",
+    description:
+      "Youth for Livable Communities is a social media campaign that aims to raise awareness about the importance of livable communities and encourage youth involvement in creating sustainable and vibrant urban environments.",
+    link: "/projects/youth-for-livable-communities",
+  },
+  {
+    id: 12,
+    title: "Winnia Products International",
+    category: "Social Media",
+    websiteLink: "https://www.facebook.com/indianfoodproducts",
+    image: "/projects/categoriesAssets/SocialMedia/WINNIA FOOD PRODUCTS FB.png",
+    description:
+      "We have various Indian grocery items & Mediterenean spices. We also have Indian kurtis, bangles, acc",
+    link: "/projects/winnia-products-international",
+  },
+  {
+    id: 13,
+    title: "Vegetarian Cooking Jam",
+    category: "Social Media",
+    websiteLink: "https://www.facebook.com/vegetariancookingjam",
+    image:
+      "/projects/categoriesAssets/SocialMedia/VEGETARIAN COOKING JAM FB.png",
+    description:
+      "We have various Indian grocery items & Mediterenean spices. We also have Indian kurtis, bangles, acc",
+    link: "/projects/vegetarian-cooking-jam",
+  },
+  {
+    id: 14,
+    title: "Romoza Home",
+    category: "Social Media",
+    websiteLink: "https://www.facebook.com/romozahome",
+    image: "/projects/categoriesAssets/SocialMedia/ROMOZA HOME FB.png",
+    description:
+      "Romoza Home offers a wide range of home decor products, including furniture, lighting, and accessories, to help you create a stylish and comfortable living space.",
+    link: "/projects/romoza-home",
+  },
+  {
+    id: 15,
+    title: "Plan Out",
+    category: "Social Media",
+    websiteLink: "https://www.facebook.com/planout.ph",
+    image: "/projects/categoriesAssets/SocialMedia/PlanOut.png",
+    description:
+      "Plan Out is a social media campaign that helps individuals and organizations plan and organize events effectively, providing tools and resources for successful event management.",
+    link: "/projects/plan-out",
+  },
+  {
+    id: 16,
+    title: "Paraiso Tropical",
+    category: "Social Media",
+    websiteLink: "https://www.facebook.com/paraisotropical",
+    image: "/projects/categoriesAssets/SocialMedia/paraisoTropicale.png",
+    description:
+      "Paraiso Tropical is a social media campaign that promotes the beauty and culture of tropical destinations, encouraging sustainable tourism and environmental conservation.",
+    link: "/projects/paraiso-tropical",
+  },
+  {
+    id: 17,
+    title: "nextART",
+    category: "Social Media",
+    websiteLink: "https://www.facebook.com/nextart.ph",
+    image: "/projects/categoriesAssets/SocialMedia/NEXTART FB.png",
+    description:
+      "nextART is a vibrant platform for artists to connect and share their creative works with a wider audience.",
+    link: "/projects/nextart",
+  },
+  {
+    id: 18,
+    title: "Miniso",
+    category: "Social Media",
+    websiteLink: "https://www.facebook.com/miniso.ph",
+    image: "/projects/categoriesAssets/SocialMedia/Miniso.png",
+    description:
+      "Miniso offers a wide range of affordable lifestyle products, bringing joy and convenience to everyday life.",
+    link: "/projects/miniso",
+  },
+  {
+    id: 19,
+    title: "Luisa Robinson Atellier",
+    category: "Social Media",
+    websiteLink: "https://www.facebook.com/luisarobinsonatellier",
+    image: "/projects/categoriesAssets/SocialMedia/LUISA ROBINSON FB.png",
+    description:
+      "Luisa Robinson Atellier is a hub for exquisite fashion designs, blending elegance with modern trends.",
+    link: "/projects/luisa-robinson-atellier",
+  },
+  {
+    id: 20,
+    title: "Kenneth Cobonpue",
+    category: "Social Media",
+    websiteLink: "https://www.facebook.com/luisarobinsonatellier",
+    image: "/projects/categoriesAssets/SocialMedia/KENNETH COBONPUE.png",
+    description:
+      "Kenneth Cobonpue is renowned for its innovative furniture designs that combine traditional craftsmanship with modern aesthetics.",
+    link: "/projects/luisa-robinson-atellier",
+  },
+  {
+    id: 21,
+    title: "Celadon",
+    category: "Social Media",
+    websiteLink: "https://www.facebook.com/kennethcobonpue",
+    image: "/projects/categoriesAssets/SocialMedia/CELADON.png",
+    description:
+      "Celadon offers a unique collection of handcrafted ceramics, perfect for adding a touch of elegance to any space.",
+    link: "/projects/kenneth-cobonpue",
+  },
+  {
+    id: 22,
+    title: "Beetzee",
+    category: "Social Media",
+    websiteLink: "https://www.facebook.com/indianfoodproducts",
+    image: "/projects/categoriesAssets/SocialMedia/Beetzee.png",
+    description:
+      "Beetzee is your go-to source for delicious and healthy beetroot-based products, promoting a nutritious lifestyle.",
+    link: "/projects/winnia-products-international",
+  },
+  {
+    id: 23,
+    title: "Aspire",
+    category: "Social Media",
+    websiteLink: "https://www.facebook.com/theartoflivingmozahome",
+    image: "/projects/categoriesAssets/SocialMedia/Aspire.png",
+    description:
+      "Aspire is a motivational platform that inspires individuals to reach their full potential through personal development.",
+    link: "/projects/the-art-of-living",
+  },
+  {
+    id: 24,
+    title: "Asia's Lashes Dumaguete",
+    category: "Social Media",
+    websiteLink: "https://www.facebook.com/theartoflivingmozahome",
+    image: "/projects/categoriesAssets/SocialMedia/ACL.png",
+    description:
+      "Asia's Lashes Dumaguete offers premium eyelash extensions, enhancing your natural beauty with a touch of elegance.",
+    link: "/projects/the-art-of-living",
+  },
+  {
+    id: 25,
+    title: "ZEN SIM",
+    category: "Branding",
+    image: "/projects/categoriesAssets/Brandings/images/zensim.jpg",
+    pdf: "/projects/categoriesAssets/Brandings/BRANDING_ZEN SIM.pdf",
+    description: "ZEN SIM",
+    link: "/projects/zen-sim",
+  },
+  {
+    id: 26,
+    title: "VINS",
+    category: "Branding",
+    image: "/projects/categoriesAssets/Brandings/images/vins.png",
+    pdf: "/projects/categoriesAssets/Brandings/BRANDING_VINS.pdf",
+    description: "VINS",
+    link: "/projects/vins",
+  },
+  {
+    id: 27,
+    title: "CHAD",
+    category: "Branding",
+    image: "/projects/categoriesAssets/Brandings/images/chad.png",
+    pdf: "/projects/categoriesAssets/Brandings/BRANDING_CHAD.pdf",
+    description: "CHAD",
+    link: "/projects/chad",
+  },
+  {
+    id: 28,
+    title: "HIRAYA",
+    category: "Branding",
+    image: "/projects/categoriesAssets/Brandings/images/hiraya.png",
+    pdf: "/projects/categoriesAssets/Brandings/BRANDING_HIRAYA.pdf",
+    description: "HIRAYA",
+    link: "/projects/hiraya",
+  },
+  {
+    id: 29,
+    title: "OUTLOUD",
+    category: "Branding",
+    image: "/projects/categoriesAssets/Brandings/images/outloud.png",
+    pdf: "/projects/categoriesAssets/Brandings/BRANDING_OUTLOUD.pdf",
+    description: "OUTLOUD",
+    link: "/projects/outloud",
+  },
+  {
+    id: 30,
+    title: "TROPEKO",
+    category: "Branding",
+    image: "/projects/categoriesAssets/Brandings/images/trop.png",
+    pdf: "/projects/categoriesAssets/Brandings/BRANDING_TROPEKO.pdf",
+    description: "TROPEKO",
+    link: "/projects/bench",
   },
 ];

@@ -3,29 +3,29 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { projects } from "../../components/home/projectsData";
 import Link from "next/link";
+import { filters } from "../../components/constants";
 
 const ProjectsPage = () => {
   const [activeFilter, setActiveFilter] = useState("all");
-
-  const filters = [
-    "all",
-    "Web Development",
-    "Digital Marketing",
-    "Branding",
-    "Booklet Designs",
-    "Corporate Profiles",
-    "Graphic Design",
-    "Murals",
-    "Photography",
-    "Social Media",
-  ];
+  const [selectedPDF, setSelectedPDF] = useState(null);
 
   const filteredProjects =
     activeFilter === "all"
       ? projects
-      : projects.filter((project) => project.category === activeFilter);
+      : projects.filter((project) => {
+          if (Array.isArray(project.category)) {
+            return project.category.includes(activeFilter);
+          }
+          return project.category === activeFilter;
+        });
 
-  console.log(filteredProjects);
+  const handleProjectClick = (project) => {
+    if (project.category === "Branding") {
+      setSelectedPDF(project.pdf);
+    } else if (project.slug) {
+      sessionStorage.setItem("project", JSON.stringify(project));
+    }
+  };
 
   return (
     <main className="pt-16">
@@ -63,7 +63,8 @@ const ProjectsPage = () => {
             {filteredProjects.map((project) => (
               <div
                 key={project.id}
-                className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 bg-secondary"
+                onClick={() => handleProjectClick(project)}
+                className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 bg-secondary cursor-pointer"
               >
                 {/* Project Image */}
                 <div className="relative h-[300px] w-full">
@@ -103,15 +104,9 @@ const ProjectsPage = () => {
                   )}
 
                   {/* Project Link */}
-                  {project.slug && (
+                  {project.slug && project.category !== "Branding" && (
                     <Link
-                      onClick={() => {
-                        sessionStorage.setItem(
-                          "project",
-                          JSON.stringify(project),
-                        );
-                      }}
-                      href={`/pages/${project.slug}`}
+                      href={`/pages/projects/${project.slug}`}
                       className="inline-block mt-4 text-primary hover:text-tertiary transition-colors duration-300 text-sm font-medium"
                     >
                       View Project Details →
@@ -121,6 +116,37 @@ const ProjectsPage = () => {
               </div>
             ))}
           </div>
+
+          {/* PDF Overlay */}
+          {selectedPDF && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
+              <div className="relative w-full h-full max-w-5xl max-h-[90vh] mx-4">
+                <button
+                  onClick={() => setSelectedPDF(null)}
+                  className="absolute top-4 right-4 text-white hover:text-gray-300 z-10"
+                >
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+                <iframe
+                  src={selectedPDF}
+                  className="w-full h-full"
+                  title="PDF Viewer"
+                />
+              </div>
+            </div>
+          )}
 
           {/* Contact CTA */}
           <div className="text-center mt-20">
