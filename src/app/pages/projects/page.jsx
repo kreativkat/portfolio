@@ -25,6 +25,8 @@ const ProjectsPage = () => {
       ? projects
       : projects.filter((project) => project.category === activeFilter);
 
+  console.log(filteredProjects);
+
   return (
     <main className="pt-16">
       <section className="w-full min-h-screen bg-quaternary py-20 font-hostGrotesk">
@@ -84,20 +86,6 @@ const ProjectsPage = () => {
 
                 {/* Project Details */}
                 <div className="p-6">
-                  <div className="mb-4">
-                    <h3 className="text-xl font-bold text-primary mb-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-tertiary">{project.description}</p>
-                  </div>
-
-                  {/* Project Categories */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="px-3 py-1 bg-primary/5 text-primary text-sm rounded-full">
-                      {project.category}
-                    </span>
-                  </div>
-
                   {/* Client Info */}
                   {project.clientName && (
                     <div className="pt-4 border-t border-primary/10">
@@ -117,6 +105,12 @@ const ProjectsPage = () => {
                   {/* Project Link */}
                   {project.slug && (
                     <Link
+                      onClick={() => {
+                        sessionStorage.setItem(
+                          "project",
+                          JSON.stringify(project),
+                        );
+                      }}
                       href={`/pages/${project.slug}`}
                       className="inline-block mt-4 text-primary hover:text-tertiary transition-colors duration-300 text-sm font-medium"
                     >

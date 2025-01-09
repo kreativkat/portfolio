@@ -253,7 +253,7 @@ const Murals = ({ project, projectDetails }) => {
               onClick={(e) => {
                 e.stopPropagation();
                 const currentIndex = muralImages.findIndex(
-                  (img) => img.id === selectedImage.id
+                  (img) => img.id === selectedImage.id,
                 );
                 const prevImage = muralImages[currentIndex - 1];
                 if (prevImage) setSelectedImage(prevImage);
@@ -278,7 +278,7 @@ const Murals = ({ project, projectDetails }) => {
               onClick={(e) => {
                 e.stopPropagation();
                 const currentIndex = muralImages.findIndex(
-                  (img) => img.id === selectedImage.id
+                  (img) => img.id === selectedImage.id,
                 );
                 const nextImage = muralImages[currentIndex + 1];
                 if (nextImage) setSelectedImage(nextImage);
