@@ -3,28 +3,22 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { projects } from "./projectsData";
+import { filters } from "../constants";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("all");
 
-  const filters = [
-    "all",
-    "Web Development",
-    "Publishing",
-    "Digital Marketing",
-    "Branding",
-    "Booklet Designs",
-    "Corporate Profiles",
-    "Graphic Design",
-    "Murals",
-    "Photography",
-    "Social Media",
-  ];
-
   const filteredProjects =
     activeFilter === "all"
-      ? projects
-      : projects.filter((project) => project.category === activeFilter);
+      ? projects.slice(0, 20)
+      : projects
+          .filter((project) => {
+            if (Array.isArray(project.category)) {
+              return project.category.includes(activeFilter);
+            }
+            return project.category === activeFilter;
+          })
+          .slice(0, 10);
 
   return (
     <section className="w-full min-h-screen bg-quaternary py-20 font-hostGrotesk">
@@ -59,33 +53,43 @@ const Projects = () => {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {filteredProjects.map((project) => (
-            <Link
-              onClick={() => {
-                sessionStorage.setItem("project", JSON.stringify(project));
-              }}
-              href={`/pages/${project.slug}`}
-              key={project.id}
-              className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              <div className="relative h-[400px] w-full">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-secondary transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                    <p className="text-secondary/90">{project.description}</p>
-                    <span className="inline-block mt-4 text-sm uppercase tracking-wider border-b border-secondary/30">
-                      View Project
-                    </span>
+            <div key={project.id}>
+              {project.websiteLink ? (
+                <Link
+                  href={project.websiteLink}
+                  className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  <div className="relative h-[400px] w-full">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="absolute bottom-0 left-0 right-0 p-6 text-secondary transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <h3 className="text-xl font-bold mb-2">
+                          {project.title}
+                        </h3>
+                        <p className="text-secondary/90">
+                          {project.description}
+                        </p>
+                        <span className="inline-block mt-4 text-sm uppercase tracking-wider border-b border-secondary/30">
+                          Visit Website
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              ) : (
+                <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="relative h-[400px] w-full">
+                    <Image src={project.image} alt={project.title} fill />
                   </div>
                 </div>
-              </div>
-            </Link>
+              )}
+            </div>
           ))}
         </div>
 

@@ -80,7 +80,7 @@ const ServicesPage = () => {
                           </svg>
                           <span className="text-tertiary">{feature}</span>
                         </div>
-                      )
+                      ),
                     )}
                   </div>
                 </div>
@@ -145,7 +145,7 @@ const ServicesPage = () => {
                                 <span className="text-primary">•</span>
                                 {service}
                               </li>
-                            )
+                            ),
                           )}
                         </ul>
                       </div>
@@ -177,7 +177,7 @@ const ServicesPage = () => {
                             {step.description}
                           </p>
                         </div>
-                      )
+                      ),
                     )}
                   </div>
                 </div>
@@ -208,7 +208,7 @@ const ServicesPage = () => {
                           ))}
                         </div>
                       </div>
-                    )
+                    ),
                   )}
                 </div>
               </div>
@@ -242,7 +242,7 @@ const ServicesPage = () => {
                             ))}
                           </ul>
                         </div>
-                      )
+                      ),
                     )}
                   </div>
                 </div>
