@@ -44,20 +44,11 @@ export const projects = [
     link: "/projects/nextart",
     slug: "nextart",
   },
-  {
-    id: 6,
-    title: "Company Profile",
-    category: "Corporate Profiles",
 
-    image: "/projects/profile.png",
-    description: "Detailed company profile for business presentation",
-    link: "/projects/company-profile",
-  },
   {
     id: 7,
     title: "Event Poster",
     category: "Graphic Design",
-
     image: "/projects/graphic.jpg",
     description: "Creative event poster design",
     link: "/projects/event-poster",
@@ -66,7 +57,6 @@ export const projects = [
     id: 8,
     title: "Mural Handuraw",
     category: "Murals",
-
     image: "/projects/murals.jpg",
     description:
       "Mural Handuraw is a mural project in the Philippines with a vibrant celebration of Filipino culture through street art, blending traditional elements with contemporary design.",
