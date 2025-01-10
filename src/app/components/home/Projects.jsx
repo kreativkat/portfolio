@@ -104,7 +104,7 @@ const Projects = () => {
                 </Link>
               ) : (
                 <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="relative h-[400px] w-full">
+                  <div className="relative h-[400px] w-full rounded-lg">
                     <Image
                       src={project.image}
                       alt={project.title}
