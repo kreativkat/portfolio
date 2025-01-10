@@ -8,6 +8,6 @@ export const filters = [
   // "Corporate Profiles",
   "Graphic Design",
   "Murals",
-  // "Creative Marketing",
+  "Creative Marketing",
   "Social Media",
 ];
