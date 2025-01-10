@@ -178,7 +178,7 @@ export const projects = [
     id: 21,
     title: "Celadon",
     category: "Social Media",
-    websiteLink: "https://www.facebook.com/kennethcobonpue",
+    websiteLink: "https://www.facebook.com/celadonart",
     image: "/projects/categoriesAssets/SocialMedia/CELADON.png",
     description:
       "Celadon offers a unique collection of handcrafted ceramics, perfect for adding a touch of elegance to any space.",
@@ -188,7 +188,7 @@ export const projects = [
     id: 22,
     title: "Beetzee",
     category: "Social Media",
-    websiteLink: "https://www.facebook.com/indianfoodproducts",
+    websiteLink: "https://www.facebook.com/beetzeecreatives",
     image: "/projects/categoriesAssets/SocialMedia/Beetzee.png",
     description:
       "Beetzee is your go-to source for delicious and healthy beetroot-based products, promoting a nutritious lifestyle.",
