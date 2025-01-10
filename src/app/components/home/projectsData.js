@@ -198,8 +198,8 @@ export const projects = [
     id: 23,
     title: "Aspire",
     category: "Social Media",
-    websiteLink: "https://www.facebook.com/theartoflivingmozahome",
-    image: "/projects/categoriesAssets/SocialMedia/Aspire.png",
+    websiteLink: "https://www.facebook.com/AspireCreditAndLendingCorp",
+    image: "/projects/categoriesAssets/SocialMedia/ASPIRE.png",
     description:
       "Aspire is a motivational platform that inspires individuals to reach their full potential through personal development.",
     link: "/projects/the-art-of-living",
