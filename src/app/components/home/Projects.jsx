@@ -84,7 +84,7 @@ const Projects = () => {
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-cover transition-transform duration-300 rounded-lg"
+                      className="object-contain transition-transform duration-300 rounded-lg"
                     />
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300  rounded-lg">

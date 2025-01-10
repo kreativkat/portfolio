@@ -4,7 +4,7 @@ export const projects = [
     title: "Creators Value",
     category: "Web Development",
     websiteLink: "https://creatorsvalue.com",
-    image: "/projects/website.png",
+    image: "/projects/categoriesAssets/Websites/websiteCV.png",
     description:
       "Creators Value is your one-stop platform for editing, publishing, branding, and marketing services. We empower visionaries to bring their ideas to life and achieve success with innovative tools and expert support.",
     link: "/pages/project/creators-value",
@@ -15,7 +15,7 @@ export const projects = [
     title: "FeatBooks",
     category: ["Publishing", "Web Development"],
     websiteLink: "https://featbooks.com",
-    image: "/projects/campaign.jpg",
+    image: "/projects/categoriesAssets/Websites/websiteFeatbooks.png",
     description:
       "Our mission is to help authors, content creators, and storytellers by providing professional publishing and marketing services that bring their visions to life.",
     link: "/projects/featbooks",
@@ -26,7 +26,7 @@ export const projects = [
     title: "KennethCobonPue",
     category: ["Corporate Profiles", "Web Development"],
     websiteLink: "https://kennethcobonpue.com",
-    image: "/projects/identity.jpg",
+    image: "/projects/categoriesAssets/Websites/websiteKenneth.png",
     description:
       "KennethCobonPue is a furniture company renowned for its innovative and stylish designs, blending traditional craftsmanship with modern aesthetics to create unique and functional pieces.",
     link: "/project/kennethcobonpue",
