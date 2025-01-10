@@ -84,7 +84,7 @@ const Projects = () => {
                       src={project.image}
                       alt={project.title}
                       fill
-                      className="object-cover transition-transform duration-300 rounded-lg"
+                      className="object-contain transition-transform duration-300 rounded-lg"
                     />
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300  rounded-lg">
@@ -104,7 +104,7 @@ const Projects = () => {
                 </Link>
               ) : (
                 <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="relative h-[400px] w-full">
+                  <div className="relative h-[400px] w-full rounded-lg">
                     <Image
                       src={project.image}
                       alt={project.title}
