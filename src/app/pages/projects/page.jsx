@@ -66,15 +66,15 @@ const ProjectsPage = () => {
               <div
                 key={project.id}
                 onClick={() => handleProjectClick(project)}
-                className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 bg-secondary cursor-pointer"
+                className="group relative overflow-hidden shadow-lg rounded-lg hover:shadow-xl transition-all duration-300 bg-secondary cursor-pointer"
               >
                 {/* Project Image */}
-                <div className="relative h-[300px] w-full rounded-lg">
+                <div className="relative h-[300px] w-full ">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-lg"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
 
                   {/* Overlay */}

@@ -6,7 +6,7 @@ export const projects = [
     websiteLink: "https://creatorsvalue.com",
     image: "/projects/categoriesAssets/Websites/websiteCV.png",
     description:
-      "Creators Value is your one-stop platform for editing, publishing, branding, and marketing services. We empower visionaries to bring their ideas to life and achieve success with innovative tools and expert support.",
+      "A comprehensive platform offering professional editing, publishing, and marketing services for authors and content creators. We help transform manuscripts into polished books and provide strategic marketing solutions.",
     link: "/pages/project/creators-value",
     slug: "creators-value",
   },
@@ -15,9 +15,9 @@ export const projects = [
     title: "FeatBooks",
     category: ["Publishing", "Web Development"],
     websiteLink: "https://featbooks.com",
-    image: "/projects/categoriesAssets/Websites/websiteFeatbooks.png",
+    image: "/projects/categoriesAssets/Websites/featbooks.png",
     description:
-      "Our mission is to help authors, content creators, and storytellers by providing professional publishing and marketing services that bring their visions to life.",
+      "A premier publishing platform that empowers authors to self-publish their books with professional support, including editing, design, and marketing services to reach a global audience.",
     link: "/projects/featbooks",
     slug: "featbooks",
   },
@@ -28,19 +28,30 @@ export const projects = [
     websiteLink: "https://kennethcobonpue.com",
     image: "/projects/categoriesAssets/Websites/websiteKenneth.png",
     description:
-      "KennethCobonPue is a furniture company renowned for its innovative and stylish designs, blending traditional craftsmanship with modern aesthetics to create unique and functional pieces.",
+      "The official website of internationally acclaimed furniture designer Kenneth Cobonpue, showcasing his innovative collections that blend natural materials and handmade production techniques with modern design.",
     link: "/project/kennethcobonpue",
     slug: "kennethcobonpue",
   },
 
   {
     id: 5,
+    title: "Pacific Traders",
+    category: ["Web Development"],
+    websiteLink: "https://www.pacific-traders.com/",
+    image: "/projects/categoriesAssets/Websites/pacific.png",
+    description:
+      "An e-commerce platform specializing in Pacific region trade, offering a diverse range of products and facilitating international commerce between Pacific nations and global markets.",
+    link: "/projects/pacific-traders",
+    slug: "pacific-traders",
+  },
+  {
+    id: 6,
     title: "NextART",
     category: ["Web Development"],
     websiteLink: "https://nextart.com",
-    image: "/projects/booklet.png",
+    image: "/projects/categoriesAssets/Websites/nextArt.png",
     description:
-      "NextART is a platform for artists to showcase their work and connect with art enthusiasts, providing a space for creativity and expression.",
+      "A digital art marketplace and community platform that connects artists with collectors, featuring contemporary artworks and providing tools for artists to showcase and sell their creations.",
     link: "/projects/nextart",
     slug: "nextart",
   },
@@ -49,7 +60,7 @@ export const projects = [
     id: 7,
     title: "Event Poster",
     category: "Graphic Design",
-    image: "/projects/graphic.jpg",
+    image: "/projects/categoriesAssets/graphicDesigns/graphic.png",
     description: "Creative event poster design",
     link: "/projects/event-poster",
   },
@@ -80,7 +91,7 @@ export const projects = [
     websiteLink: "https://www.facebook.com/youthforlivablecommunities",
     image: "/projects/categoriesAssets/SocialMedia/YLC.png",
     description:
-      "Youth for Livable Communities is a social media campaign that aims to raise awareness about the importance of livable communities and encourage youth involvement in creating sustainable and vibrant urban environments.",
+      "A youth-led initiative promoting sustainable urban development and community engagement through social media campaigns and local action projects.",
     link: "/projects/youth-for-livable-communities",
   },
   {
@@ -88,9 +99,9 @@ export const projects = [
     title: "Winnia Products International",
     category: "Social Media",
     websiteLink: "https://www.facebook.com/indianfoodproducts",
-    image: "/projects/categoriesAssets/SocialMedia/WINNIA FOOD PRODUCTS FB.png",
+    image: "/projects/categoriesAssets/SocialMedia/winnia.png",
     description:
-      "We have various Indian grocery items & Mediterenean spices. We also have Indian kurtis, bangles, acc",
+      "An international food products company specializing in authentic Indian groceries, spices, and cultural products, bringing the flavors of India to global customers.",
     link: "/projects/winnia-products-international",
   },
   {
@@ -98,8 +109,7 @@ export const projects = [
     title: "Vegetarian Cooking Jam",
     category: "Social Media",
     websiteLink: "https://www.facebook.com/vegetariancookingjam",
-    image:
-      "/projects/categoriesAssets/SocialMedia/VEGETARIAN COOKING JAM FB.png",
+    image: "/projects/categoriesAssets/SocialMedia/vegetarian.png",
     description:
       "We have various Indian grocery items & Mediterenean spices. We also have Indian kurtis, bangles, acc",
     link: "/projects/vegetarian-cooking-jam",
@@ -109,7 +119,7 @@ export const projects = [
     title: "Romoza Home",
     category: "Social Media",
     websiteLink: "https://www.facebook.com/romozahome",
-    image: "/projects/categoriesAssets/SocialMedia/ROMOZA HOME FB.png",
+    image: "/projects/categoriesAssets/SocialMedia/romoza.png",
     description:
       "Romoza Home offers a wide range of home decor products, including furniture, lighting, and accessories, to help you create a stylish and comfortable living space.",
     link: "/projects/romoza-home",
@@ -129,7 +139,7 @@ export const projects = [
     title: "Paraiso Tropical",
     category: "Social Media",
     websiteLink: "https://www.facebook.com/paraisotropical",
-    image: "/projects/categoriesAssets/SocialMedia/paraisoTropicale.png",
+    image: "/projects/categoriesAssets/SocialMedia/paraiso.png",
     description:
       "Paraiso Tropical is a social media campaign that promotes the beauty and culture of tropical destinations, encouraging sustainable tourism and environmental conservation.",
     link: "/projects/paraiso-tropical",
@@ -139,7 +149,7 @@ export const projects = [
     title: "nextART",
     category: "Social Media",
     websiteLink: "https://www.facebook.com/nextart.ph",
-    image: "/projects/categoriesAssets/SocialMedia/NEXTART FB.png",
+    image: "/projects/categoriesAssets/SocialMedia/nextART.png",
     description:
       "nextART is a vibrant platform for artists to connect and share their creative works with a wider audience.",
     link: "/projects/nextart",
@@ -159,7 +169,7 @@ export const projects = [
     title: "Luisa Robinson Atellier",
     category: "Social Media",
     websiteLink: "https://www.facebook.com/luisarobinsonatellier",
-    image: "/projects/categoriesAssets/SocialMedia/LUISA ROBINSON FB.png",
+    image: "/projects/categoriesAssets/SocialMedia/luisa.png",
     description:
       "Luisa Robinson Atellier is a hub for exquisite fashion designs, blending elegance with modern trends.",
     link: "/projects/luisa-robinson-atellier",
@@ -168,11 +178,11 @@ export const projects = [
     id: 20,
     title: "Kenneth Cobonpue",
     category: "Social Media",
-    websiteLink: "https://www.facebook.com/luisarobinsonatellier",
-    image: "/projects/categoriesAssets/SocialMedia/KENNETH COBONPUE.png",
+    websiteLink: "https://www.facebook.com/kennethcobonpue",
+    image: "/projects/categoriesAssets/SocialMedia/kenneth.png",
     description:
-      "Kenneth Cobonpue is renowned for its innovative furniture designs that combine traditional craftsmanship with modern aesthetics.",
-    link: "/projects/luisa-robinson-atellier",
+      "The official social media presence of Kenneth Cobonpue, showcasing his globally recognized furniture designs, latest collections, and brand updates.",
+    link: "/projects/kenneth-cobonpue",
   },
   {
     id: 21,
