@@ -26,6 +26,21 @@ const Footer = () => {
     },
   ];
 
+  const contactAddresses = [
+    {
+      name: "Creators Value",
+      address: "Nevada, USA (Service Area)",
+    },
+    {
+      name: "Kreativ Kat - Creators Value",
+      address: "Cebu, PH",
+    },
+    {
+      name: "FS Art and Design Studio - Creators Value",
+      address: "Ontario, Canada",
+    },
+  ];
+
   return (
     <footer className="bg-primary font-hostGrotesk">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -41,6 +56,17 @@ const Footer = () => {
             <p className="text-secondary/80 mt-2">
               Creating digital experiences with passion and purpose.
             </p>
+            <div className="text-white flex flex-col gap-2">
+              {contactAddresses.map((address, index) => (
+                <div key={index}>
+                  <h1 className="text-xl font-black">{address.name}</h1>
+                  <p className="text-sm">{address.address}</p>
+                </div>
+              ))}
+              <div>
+                <p>+1 (647) 540‑5596</p>
+              </div>
+            </div>
           </div>
 
           {/* Links Sections */}
