@@ -57,12 +57,16 @@ const Footer = () => {
               Creating digital experiences with passion and purpose.
             </p>
             <div className="text-white flex flex-col gap-2">
-              {contactAddresses.map((address, index) => (
+              <h1 className="text-xl font-black">Address</h1>
+              <div>
+                <p>208 Evans Avenue, Toronto, Ontario M8Z 1J7</p>
+              </div>
+              {/* {contactAddresses.map((address, index) => (
                 <div key={index}>
                   <h1 className="text-xl font-black">{address.name}</h1>
                   <p className="text-sm">{address.address}</p>
                 </div>
-              ))}
+              ))} */}
               <div>
                 <p>+1 (647) 540‑5596</p>
               </div>
