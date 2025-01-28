@@ -59,7 +59,10 @@ const Footer = () => {
             <div className="text-white flex flex-col gap-2">
               <h1 className="text-xl font-black">Address</h1>
               <div>
-                <p>208 Evans Avenue, Toronto, Ontario M8Z 1J7</p>
+                <p>
+                  Owen & Associates, 208 Evans Avenue, Toronto, Ontario M8Z 1J7,
+                  Canada
+                </p>
               </div>
               {/* {contactAddresses.map((address, index) => (
                 <div key={index}>
