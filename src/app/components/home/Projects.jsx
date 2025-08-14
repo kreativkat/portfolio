@@ -78,6 +78,7 @@ const Projects = () => {
                 <Link
                   href={project.websiteLink}
                   className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                  target="_blank"
                 >
                   <div className="relative h-[400px] w-full rounded-lg">
                     <Image

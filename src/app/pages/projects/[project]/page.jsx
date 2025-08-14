@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import { useParams } from "next/navigation";
 import { projects } from "../../../components/home/projectsData";
 import { projectDetails } from "./projectDetailsData";
@@ -16,7 +15,6 @@ const ProjectDetail = () => {
   const params = useParams();
   const project = projects.find((p) => p.slug === params.project);
   const projectData = JSON.parse(sessionStorage.getItem("project"));
-  console.log(projectData);
 
   if (!project) {
     return (

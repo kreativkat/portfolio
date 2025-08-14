@@ -4,6 +4,7 @@ export const filters = [
   "Publishing",
   // "Digital Marketing",
   "Branding",
+  "Booklets",
   // "Booklet Designs",
   // "Corporate Profiles",
   "Graphic Design",
