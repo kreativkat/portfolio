@@ -22,7 +22,7 @@ const ProjectsPage = () => {
         });
 
   const handleProjectClick = (project) => {
-    if (project.category === "Branding" || project.category === "Booklets") {
+    if (project.category === "Branding") {
       setSelectedPDF(project.pdf);
     } else if (project.websiteLink) {
       window.open(project.websiteLink, "_blank");

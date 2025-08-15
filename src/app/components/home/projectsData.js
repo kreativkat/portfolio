@@ -559,7 +559,8 @@ export const projects = [
     image: "/projects/booklets/January.png",
     description: "Creative Marketing",
     link: "/projects/creative-marketing",
-    pdf: "/projects/booklets/nextArtJanuary.pdf",
+    websiteLink:
+      "https://drive.google.com/file/d/1aa9ywd4mD6XMKrsPQ1-nSlzY3C9Veutw/view?usp=sharing",
   },
   {
     id: 67,
@@ -568,7 +569,8 @@ export const projects = [
     image: "/projects/booklets/February.png",
     description: "Creative Marketing",
     link: "/projects/creative-marketing",
-    pdf: "/projects/booklets/FebruarynextART.pdf",
+    websiteLink:
+      "https://drive.google.com/file/d/1ro4mNQhXAq9L5nxq_Sp_HvPqrNKA3NbB/view?usp=sharing",
   },
   {
     id: 68,
@@ -577,7 +579,8 @@ export const projects = [
     image: "/projects/booklets/March.png",
     description: "Creative Marketing",
     link: "/projects/creative-marketing",
-    pdf: "/projects/booklets/MarchnextART.pdf",
+    websiteLink:
+      "https://drive.google.com/file/d/1CqbbuiODrfy62_EtHStg2Lb4_ZPIQiHR/view?usp=sharing",
   },
   {
     id: 69,
